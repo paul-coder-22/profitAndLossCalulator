@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+
+}
+
+:root{
+    /* --primary-color : #1c313a; */
+    --primary-color : #18191f;
+    --secondary-color : rgba(0,0,0,.05);
+    --tertiary-color : rgba(0,0,0,.6);
+    --border-color: #151616;  
+    --bold-text:#3e32e4;  
+    --text-color:#fff;
+}
+
+.navigation{
+    width: 100vw;
+    height: 4.5rem;
+    background-color: var(--primary-color);
+}
+
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation ul li{
+    margin: 1% 1rem;
+    padding: 0.7rem;
+    border-color: red;
+}
+.navigation ul li a{
+    padding: .35em .3rem;
+    text-decoration: none;
+    border: 1px solid var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 800;
+    transition: 0.5s;
+}
+.navigation ul li a:hover{
+    background-color: var(--tertiary-color);
+    border-radius: 0.5rem;
+}
+
+/* main content */
+.main-container{
+    width: 75vw;
+    margin: 3% auto;
+    /* back */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 40px 40px -10px var(--tertiary-color);
+    display: flex;
+    border: 1px solid rgb(245,245,245);
+}
+
+.firstDiv{
+   flex-basis: 320%;
+   flex-grow: 3;
+   flex-shrink: 1;
+}
+
+.secondDiv{
+   flex-basis: 220%;
+   /* flex-grow: 3; */
+   /* flex-shrink: 1 */
+}
+.firstDiv h1 span{
+    display: block;
+    width: auto;
+    margin: 1rem auto;
+    text-align: center;
+    color: var(--text-color);
+
+}
+.firstDivp  h1 span span{
+    display: inline-block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: var(--bold-text);
+}
+/* .input-div input{
+    display: block;
+    margin: 1rem auto;
+    width: 25vw;
+    outline: none;
+    border-color: var(--primary-color);
+} */
+.input-div .input-div-container {
+    margin: 0.8rem auto;
+    width: 25vw;
+    outline: none;
+    border-color: var(--primary-color);
+
+}
+.input-div .input-div-container label{
+    margin-right: 1rem;
+    font-weight: 800;
+}
+.input-div .input-div-container input{
+    width: 22vw;
+    height: 5vh;
+    margin: 1% 0% 1% 0%;
+}
+
+.input-div button{
+    display: block;
+    border: 2px solid var(--border-color);
+    margin: 1rem auto;
+    padding: .3rem .5rem;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.8rem;
+    background-color: var(--text-color);
+    cursor: pointer;
+    border-color: var(--primary-color);
+}   
+.secondDiv img{
+    width: 90%;
+    height: 50vh;
+    margin: 1rem;
+    opacity: 0.5;
+}

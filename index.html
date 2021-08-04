@@ -5,20 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/fb676f87ae.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
     <title>Profit | Loss : calculator </title>
 </head>
 
 <body>
-    <input type="number" id="costPrice" value="100">
+    <div class="main">
+        <div class="navigation">
+            <ul>
+                <li class="item" id="item-1"><a href="">First Box</a></li>
+                <li class="item" id="item-2"><a href="">Second Box</a></li>
+                <li class="item" id="item-3"><a href="">Third Box</a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+            <div class="firstDiv">
+                <h1>
+                    <div>
+                        Check Profit | Loss
+                    </div>
+                    <div>
+                        on your Stock
+                    </div>
+                </h1>
+                <div class="input-div">
+                    <div class="input-div-container">
+                        <label for="costPrice">Purchase Price</label>
+                        <input type="number" id="costPrice" value="10">
+
+                    </div>
+
+                    <div class="input-div-container">
+                        <label for="quantity">Stock Quantity</label>
+                        <input type="number" id="quantity" value="100">
+                    </div>
+
+                    <div class="input-div-container">
+                        <label for="sellingPrice">Current Price </label>
+                        <input type="number" id="sellingPrice" value="1">
+                    </div>
+                    <em class="error-text1" style="align-self: center;display: flex;"></em>
+                    <button id="getResult">Click</button>
+                </div>
+                <div class="result-div">
+
+                </div>
+            </div>
+            <div class="secondDiv" style="border-left: 1px solid #151616">
+                <div class="git-div">
+                    <img src="https://media.giphy.com/media/ZlGEeefJJvjB1f1x4J/giphy.gif" alt="">
+                    <!-- <img src="https://media.giphy.com/media/l31XaGrL7GoevTVhXX/giphy.gif" alt=""> -->
+                </div>
+                <div>
+                    <h1 class="funny-text">Output Loading.....</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- <input type="number" id="costPrice" value="100">
     <input type="number" id="quantity" value="2">
     <input type="number" id="sellingPrice" value="10">
     <button onclick="getResult()">Click</button>
-
-    <div id="resultDivPercentage" style="border: 1px solid red; width: 100px; height: 100px;">
-    </div>
-    <div id="resultDivTotal" style="border: 1px solid red; width: 100px; height: 100px;">
-    </div>
+-->
     <script src="./script.js"></script>
 </body>
 
