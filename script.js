@@ -1,7 +1,7 @@
 let cp = document.getElementById('costPrice');
 let quantity = document.querySelector('#quantity');
 let sp = document.querySelector('#sellingPrice');
-
+console.log(document.querySelector('.colorText-change').innerHTML)
 /* function errorText() {
     if (cp.value < 1 && quantity.value < 1 && sp.value < 1) {
         document.querySelector('.error-text1').innerHTML = 'Put a valid Purchase Price.'

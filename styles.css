@@ -15,6 +15,7 @@
     --border-color: #151616;  
     --bold-text:#3e32e4;  
     --text-color:#fff;
+    --profit :#00FF66;  
 }
 
 .navigation{
@@ -48,27 +49,26 @@
 
 /* main content */
 .main-container{
-    width: 75vw;
+    width: 80vw;
     margin: 3% auto;
     /* back */
     border: 1px solid var(--border-color);
     box-shadow: 0 40px 40px -10px var(--tertiary-color);
     display: flex;
+    align-content: stretch;
     border: 1px solid rgb(245,245,245);
 }
 
 .firstDiv{
-   flex-basis: 320%;
-   flex-grow: 3;
-   flex-shrink: 1;
+   flex-basis: 50%;
 }
 
 .secondDiv{
-   flex-basis: 220%;
-   /* flex-grow: 3; */
-   /* flex-shrink: 1 */
+    text-align: center;
+    flex-basis: 50%;
 }
-.firstDiv h1 span{
+
+.firstDiv h1 div{
     display: block;
     width: auto;
     margin: 1rem auto;
@@ -76,6 +76,11 @@
     color: var(--text-color);
 
 }
+.firstDiv h1 .colorText-change .profit,.loss{
+    color: var(--bold-text);
+    margin: 0 0.5rem;
+}   
+
 .firstDivp  h1 span span{
     display: inline-block;
     margin-block-start: 0;
@@ -95,7 +100,8 @@
     margin: 0.8rem auto;
     width: 25vw;
     outline: none;
-    border-color: var(--primary-color);
+    color: var(--text-color);
+    
 
 }
 .input-div .input-div-container label{
@@ -105,6 +111,8 @@
 .input-div .input-div-container input{
     width: 22vw;
     height: 5vh;
+    color: var(--text-color);
+    border-color: var(--bold-text);
     margin: 1% 0% 1% 0%;
 }
 
@@ -116,13 +124,63 @@
     outline: none;
     font-weight: 400;
     font-size: 0.8rem;
-    background-color: var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    /* background-color: var(--text-color); */
     cursor: pointer;
-    border-color: var(--primary-color);
+    border-color: var(--text-color);
 }   
 .secondDiv img{
-    width: 90%;
+    width: 75%;
     height: 50vh;
     margin: 1rem;
     opacity: 0.5;
 }
+.secondDiv .funny-text{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container{
+        width: 100%;
+        flex-direction: column;
+        border: none;
+    }
+    .firstDiv{
+        width: 100%;
+        background-color: var(--text-color);
+     }
+     .secondDiv{
+        width: 100%;
+     }
+     .firstDiv h1 div{
+        margin: 0.7rem auto;
+    }
+    .firstDiv h1 .colorText-change .profit,.loss{
+        color: var(--bold-text);
+        margin: 0.2rem;
+    }
+    .input-div .input-div-container {
+        margin: 0.8rem auto;
+        width: 50vw;
+        text-align: center
+    }
+
+    .input-div .input-div-container input{
+        width: 40vw;
+        height: 5vh;
+        color: var(--text-color);
+        border-color: var(--bold-text);
+        margin: 1% 1% 1% 1%;
+    }
+
+    .secondDiv img{
+        width: 75%;
+        height: 30vh;
+        opacity: 0.6;
+    }
+    .secondDiv .funny-text{
+        font-size: 0.9rem;
+    }
+  }
