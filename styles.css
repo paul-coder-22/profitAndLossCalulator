@@ -4,9 +4,8 @@
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     background-color: var(--primary-color);
-
+    /* border: 1px solid #00FF66; */
 }
-
 :root{
     /* --primary-color : #1c313a; */
     --primary-color : #18191f;
@@ -17,10 +16,13 @@
     --text-color:#fff;
     --profit :#00FF66;  
 }
+.main{
+    height: 100vh;
+}
 
+/* navigation-bar */
 .navigation{
     width: 100vw;
-    height: 4.5rem;
     background-color: var(--primary-color);
 }
 
@@ -47,25 +49,21 @@
     border-radius: 0.5rem;
 }
 
-/* main content */
+
+
+/* main-container*/
 .main-container{
-    width: 80vw;
-    margin: 3% auto;
-    /* back */
+    width: 65vw;
+    margin: 0% auto;
     border: 1px solid var(--border-color);
     box-shadow: 0 40px 40px -10px var(--tertiary-color);
     display: flex;
-    align-content: stretch;
-    border: 1px solid rgb(245,245,245);
 }
 
+
+/* left side div in main container */
 .firstDiv{
    flex-basis: 50%;
-}
-
-.secondDiv{
-    text-align: center;
-    flex-basis: 50%;
 }
 
 .firstDiv h1 div{
@@ -74,12 +72,12 @@
     margin: 1rem auto;
     text-align: center;
     color: var(--text-color);
-
 }
+
 .firstDiv h1 .colorText-change .profit,.loss{
     color: var(--bold-text);
     margin: 0 0.5rem;
-}   
+} 
 
 .firstDivp  h1 span span{
     display: inline-block;
@@ -89,6 +87,48 @@
     margin-inline-end: 0px;
     color: var(--bold-text);
 }
+
+.input-div > *{
+    text-align: center;
+}
+
+.input-div .input-div-container {
+    margin:  auto;
+    width: 25vw;
+    color: var(--text-color);
+}
+
+.input-div .input-div-container label{
+    font-weight: bold;
+}
+
+.input-div .input-div-container input{
+    width: 22vw;
+    height: 5vh;
+    border-radius: 2%;
+    padding: 0.2rem;
+    color: var(--text-color);
+    border-color: var(--bold-text);
+    margin: 2% 0% 1% 0%;
+    font-size: 1.1rem;
+}
+
+
+.input-div button{
+    display: block;
+    margin: 1rem auto;
+    padding: .5rem 1.6rem;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    border-color: var(--text-color);
+}
+
+
+
+
 /* .input-div input{
     display: block;
     margin: 1rem auto;
@@ -96,56 +136,45 @@
     outline: none;
     border-color: var(--primary-color);
 } */
-.input-div .input-div-container {
-    margin: 0.8rem auto;
-    width: 25vw;
-    outline: none;
-    color: var(--text-color);
-    
 
+/* right side div in main container */
+
+.secondDiv{
+    text-align: center;
+    flex-basis: 50%;
 }
-.input-div .input-div-container label{
-    margin-right: 1rem;
-    font-weight: 800;
-}
-.input-div .input-div-container input{
-    width: 22vw;
-    height: 5vh;
-    color: var(--text-color);
-    border-color: var(--bold-text);
-    margin: 1% 0% 1% 0%;
+   
+
+.secondDiv .git-div{
+    /* position: absolute; */
+    /* bottom: 0%; */
 }
 
-.input-div button{
-    display: block;
-    border: 2px solid var(--border-color);
-    margin: 1rem auto;
-    padding: .3rem .5rem;
-    outline: none;
-    font-weight: 400;
-    font-size: 0.8rem;
-    background: transparent;
+.secondDiv .output-div{
+    padding: 1.5rem 0rem 0rem 0rem;
+}
+.secondDiv .output-div p{
     color: var(--text-color);
-    /* background-color: var(--text-color); */
-    cursor: pointer;
-    border-color: var(--text-color);
-}   
+}
+
 .secondDiv img{
-    width: 75%;
-    height: 50vh;
-    margin: 1rem;
-    opacity: 0.5;
+    width: 70%;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    /* border-radius: 7%; */
 }
+
+
 .secondDiv .funny-text{
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 130%;
+    margin: 0.5rem;
 }
 
 @media only screen and (max-width: 600px) {
     .main-container{
         width: 100%;
         flex-direction: column;
-        border: none;
     }
     .firstDiv{
         width: 100%;
@@ -177,8 +206,7 @@
 
     .secondDiv img{
         width: 75%;
-        height: 30vh;
-        opacity: 0.6;
+        /* height: 30vh; */
     }
     .secondDiv .funny-text{
         font-size: 0.9rem;

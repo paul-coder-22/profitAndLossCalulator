@@ -1,7 +1,8 @@
 let cp = document.getElementById('costPrice');
 let quantity = document.querySelector('#quantity');
 let sp = document.querySelector('#sellingPrice');
-console.log(document.querySelector('.colorText-change').innerHTML)
+let profitText = document.querySelector('.profit');
+let lossText = document.querySelector('.loss');
 /* function errorText() {
     if (cp.value < 1 && quantity.value < 1 && sp.value < 1) {
         document.querySelector('.error-text1').innerHTML = 'Put a valid Purchase Price.'
@@ -28,17 +29,28 @@ document.querySelector("#getResult").addEventListener('click', () => {
 function getValueOfStock() {
 
     if (cp.value > sp.value) {
+
+        profitText.style.color = 'blue'
+        lossText.style.color = 'red'
+        document.querySelector(".main-container").style.boxShadow = "0 14px 40px -10px red";
         const loss = getLoss(cp.value, quantity.value, sp.value);
         returnLossFromStock(loss);
-    } else if (cp.value < sp.value) {
+
+    } else if (sp.value > cp.value) {
+
+        profitText.style.color = "#3ED625"
+        lossText.style.color = 'blue'
+        document.querySelector(".main-container").style.boxShadow = "0 14px 40px -10px  #00ff00";
+
         const profit = getProfit(cp.value, quantity.value, sp.value);
         returnProfitFromStock(profit);
     }
 }
 
 function getLoss(costPrice, amount, sellingPrice) {
-    let loss = (costPrice * amount) - (sellingPrice * amount);
-    let lossPercentage = (loss / (costPrice * amount)) * 100
+    let loss = (costPrice - sellingPrice) * amount;
+    let lossPercentage = (loss / costPrice) * 100
+
     return {
         loss,
         lossPercentage
@@ -46,8 +58,11 @@ function getLoss(costPrice, amount, sellingPrice) {
 }
 
 function getProfit(costPrice, amount, sellingPrice) {
-    let profit = (sellingPrice * amount) - (costPrice * amount);
-    let profitPercentage = (profit / (costPrice * amount)) * 100;
+    let profit = (sellingPrice - costPrice) * amount;
+    let profitPercentage = (profit / costPrice) * 100;
+    console.log(profit)
+    console.log(profitPercentage)
+
     return {
         profit,
         profitPercentage
@@ -55,12 +70,13 @@ function getProfit(costPrice, amount, sellingPrice) {
 }
 
 function returnLossFromStock(lossObj) {
-    document.querySelector('img').src = 'https://media.giphy.com/media/l31XaGrL7GoevTVhXX/giphy.gif'
-    document.querySelector('.funny-text').innerHTML = `You lost ${lossObj.lossPercentage}. Your total loss is  ${lossObj.loss}`
+    document.querySelector('img').src = 'https://c.tenor.com/N27WfZCY4nUAAAAi/sorry-sad.gif'
+    document.querySelector('.funny-text').innerHTML = `You lost ${lossObj.lossPercentage}%<b>.</b> Your total loss is  ${lossObj.loss}`
 }
 
 function returnProfitFromStock(profitObj) {
-    document.querySelector('img').src = 'https://media.giphy.com/media/14udF3WUwwGMaA/giphy.gif'
-    document.querySelector('.funny-text').innerHTML = `You gained ${profitObj.profitPercentage}. Your total profit is  ${profitObj.profit}`
+    // document.querySelector('img').src = 'https://media3.giphy.com/media/l41Ys1fQky5raqvMQ/giphy.gif?cid=790b76113c5577df8a1e8804bd2cd8701fabeb66370a74cc&rid=giphy.gif&ct=g'
+    document.querySelector('img').src = 'https://c.tenor.com/UhLv_deOrtMAAAAi/happy-milk-peach-happy.gif'
+    document.querySelector('.funny-text').innerHTML = `You gained ${profitObj.profitPercentage}%<b>.</b> Your total profit is  ${profitObj.profit}`
 
 }
