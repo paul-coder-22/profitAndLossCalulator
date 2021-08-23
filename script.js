@@ -49,17 +49,17 @@ function getValueOfStock() {
 
 function getLoss(costPrice, amount, sellingPrice) {
     let loss = (costPrice - sellingPrice) * amount;
-    let lossPercentage = (loss / costPrice) * 100
+    let lossPercentage = (loss / (costPrice * amount)) * 100
 
     return {
         loss,
         lossPercentage
-    }
+    };
 }
 
 function getProfit(costPrice, amount, sellingPrice) {
     let profit = (sellingPrice - costPrice) * amount;
-    let profitPercentage = (profit / costPrice) * 100;
+    let profitPercentage = (profit / (costPrice * amount)) * 100;
     console.log(profit)
     console.log(profitPercentage)
 
