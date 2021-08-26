@@ -44,6 +44,12 @@ function getValueOfStock() {
 
         const profit = getProfit(cp.value, quantity.value, sp.value);
         returnProfitFromStock(profit);
+    } else {
+        profitText.style.color = "blue";
+        lossText.style.color = "blue";
+        document.querySelector('img').src = 'https://c.tenor.com/o5lVa9lcrY4AAAAi/crawling-spy.gif'
+        document.querySelector('.funny-text').innerHTML = `You lost ${0.00}%<b>.</b> Your total loss is  ${0.00}`
+        document.querySelector('.main-container').style.boxShadow = "0 14px 40px -10px #ffff"
     }
 }
 
