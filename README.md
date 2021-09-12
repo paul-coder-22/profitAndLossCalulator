@@ -1,6 +1,6 @@
 # profitAndLossCalulator
 
-
+<img src="./Profit and loss.png" alt="" srcset="">
 
 ## Features
   
